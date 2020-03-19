@@ -1,0 +1,36 @@
+Nume, prenume: Roinita, Lucian-Teodor | Calin, Dragos-Stefan
+Grupa, seria: 315CA | 315CA
+
+Data inceperii temei: 17-05-2019
+Data finalizarii temei: 19-05-2019
+
+Problemele intampinate:
+	- ne-a luat ceva timp sa intelegem bine clasa AEGraph si functiile ei.
+
+Algoritmul utilizat:
+	- possible_double_cuts: am facut functia dupa modelul functiei get_paths_to
+	pentru subgrafuri. Am inlocuit conditia de acolo cu cea pentru double_cut.
+	- double_cut: am mers cu un pointer pana la graful indicat de vectorul
+	where, apoi am o sters o taietura, am copiat propozitiile de mai jos la
+	nodul curent, dupa care le-am sters pe cele de jos si am sters si cealalta
+	taietura.
+	- possible_erasures: am fost nevoiti sa adaugam o noua functie, deoarece
+	aveam nevoie ca radacina grafului sa nu se modifica in recursivitate.
+	In functia recursiva am apelat get_paths_to pt fiecare taietura si fiecare
+	propozitie si le-am pus in vectorul rezultat doar pe cele cu lungime impara.
+	- erase: aparent este exact functia deiterate.
+	- possible_deiterations: am luat, pe rand, taieturile si propozitiile si
+	am salvat in vectorul rezultat caile diferite care duc a grafuri identice.
+	- deiterate: am folosit, din nou, o functie recursiva, care sterge totul
+	de la un nod dat in jos. Am parcurs graful cu un pointer ca sa ajungem la
+	acel nod.
+
+Complexitatea temei:
+	- tema in sine nu a fost greu de rezolvat; doar sa scriem implementarile unor
+	functii, nu adevarata logica a programului. A ridicat totusi niste probleme la
+	alte aspecte: lucrul cu date abstracte si parcurgerea recursiva a grafurilor.
+
+Alte precizari:
+	- din punct de vedere al lucrului in echipa, aportul fiecaruia a fost de 50%.
+	Nu am lucrat cu git sau alte platforme de gestionare a codului, intrucat am
+	lucrat impreuna la acelasi birou. 
